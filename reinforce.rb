@@ -9,3 +9,10 @@ p cloud["tracks"][4]["duration_in_milliseconds"]
 
 songs = cloud["tracks"].count
 p songs
+
+duration = 0
+cloud["tracks"].each do |song|
+  duration += song["duration_in_milliseconds"]
+end
+
+puts "The duration of all songs is #{duration} milliseconds"
